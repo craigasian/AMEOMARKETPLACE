@@ -4,3 +4,11 @@ input[type=checkbox]{display:inline-block;width:auto;margin-right:8px}hr{border:
 
 /* AI Made Easy OC brand: existing logo, navy, ocean blue, orange, Poppins/Open Sans. */
 .brand img{display:block;width:220px;height:auto}.brand small{color:var(--ink);font-size:9px;letter-spacing:3px;margin-top:7px}.hero h1{font-weight:700;letter-spacing:-2.2px}.hero-art{background:linear-gradient(145deg,#fff5e9,#d9edf7);border-radius:24px}.orbit{color:#ff851b}.button,button{background:var(--lime);color:var(--ink);border-radius:9px}.secondary{background:#eaf5fa}.danger{background:#f8e5dd}.cta .button{background:var(--lime)}.card{border-radius:15px}header{padding-top:19px;padding-bottom:19px}footer .brand img{width:220px}.preview{background:#103b5c}.category .icon{color:#0077b6}.tag{color:#103b5c}.preview span{color:white}@media(max-width:800px){.brand img{width:180px}}@media(max-width:550px){.brand img{width:145px}.brand small{font-size:8px;letter-spacing:2px}header{gap:12px}.hero h1{font-size:42px;letter-spacing:-1.6px}}
+
+/* Chat attachments & live status */
+.attach{margin-top:8px;padding-top:6px;border-top:1px solid var(--line)}
+.attach .textlink{font-size:12px}
+#live-status{font-size:11px;letter-spacing:.3px}
+.narrow h2{margin-top:32px;font-size:22px}
+.narrow ul{color:var(--muted);padding-left:20px}
+.narrow li{margin-bottom:8px}
