@@ -36,7 +36,7 @@ Updated October 29, 2026 (evening). This is a working test release, not a comple
 | 2 | Video links on bookings | Not started | Meeting link integration remains. |
 | 2 | Disputes | Not started | Reporting and resolution workflow remains. |
 | 1 | Pro approval queue | Done | Approve/reject/suspend, edits return to review, audit trail. |
-| 1 | Users and listings | Partial | User suspension/restoration and listing moderation work. Admin “Edit listing” UI added; full field update still needs a small `market_action` extension (or pro re-submission). Category/city lists remain code constants. |
+| 1 | Users and listings | Partial | User suspension/restoration and listing moderation work. **Admin Edit listing UI + `admin_edit_listing` action ready** — run `database/admin_edit_listing.sql` in Supabase to activate full field updates. Category/city lists remain code constants. |
 | 2 | Payments and refunds | Deferred | Stripe deferred; no payment/refund processing. Refund policy text is published for future use. |
 | 2 | Moderation and promos | Not started | Review moderation, featured listings, promo codes remain. Listing moderation already exists. |
 | 3 | Marketplace analytics | Not started | Revenue, take rate, category reporting remain. |
@@ -50,14 +50,14 @@ Updated October 29, 2026 (evening). This is a working test release, not a comple
 - Test accounts, listing, projects, messages, booking, and review were removed after testing.
 - Directory intentionally starts empty until real professionals are onboarded and approved.
 - Public access authorized by owner after initial private deployment. Search indexing remains disabled during testing.
-- **2026-10-29 evening update:** Legal documents finalized on the public Legal page. Messaging gained live Realtime subscription + attachment-link support. Admin gained an Edit listing entry point.
+- **2026-10-29 evening update:** Legal documents finalized. Messaging gained live Realtime + attachment-link support. Admin gained Edit listing UI. SQL migration `database/admin_edit_listing.sql` adds the `admin_edit_listing` action.
 
 ## Suggested next work
 
 1. Owner creates/verifies account and completes display name; verify admin menu appears.
 2. Confirm production email delivery/custom SMTP, then Google sign-in if desired.
-3. Enable Realtime on `market_messages` in the Supabase dashboard (Publication → supabase_realtime) so live chat indicators stay green.
-4. Optional: add an `attachment` text column + storage bucket, or keep URL-in-body approach.
-5. Optional: extend `market_action` with an `admin_edit_listing` action so the new Edit UI can persist field changes without pro re-submission.
+3. **Run `database/admin_edit_listing.sql` in the Supabase SQL editor** so the Admin Edit form can persist field changes.
+4. Enable Realtime on `market_messages` in the Supabase dashboard (Publication → supabase_realtime) so live chat indicators stay green.
+5. Optional: add an `attachment` text column + storage bucket, or keep URL-in-body approach.
 6. Onboard real professionals and approve their listings.
 7. Add Stripe only when owner is ready; then Phase 2 growth features.
